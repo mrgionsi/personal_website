@@ -1,0 +1,55 @@
+<title>EDUCATION</title>
+
+<h2>MY EDUCATION</h2>
+
+<div class="row">
+    <div class="col-12">
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button (click)="expandcollapse('collapseOne',$event)" class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            DEGREE IN COMPUTER SCIENCE
+          </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p><span>Target Degree: </span><span> 2022</span></p>
+                        <p>Degree in Computer Scienze at University of Fisciano (SA) U.N.I.S.A.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button (click)="expandcollapse('collapseTwo',$event)" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        ERASMUS PLUS: BRUSSELS (2016)
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>3 months Erasmus in Brussels (Belgium) </p>
+                        <p>Stage about web development (HTML, CSS, JS) and use of Wordpress for Service Plan Brussels.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button (click)="expandcollapse('collapseThree',$event)" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            DIPLOMA IN INFORMATION TECHNOLOGY  (2015)                      </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>DIPLOMA IN INFORMATION TECHNOLOGY AT I.T.I.S. F. Giordani, Caserta. </p>
+                        <p>Vote: 83/100 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
