@@ -12,3 +12,9 @@ span {
     text-decoration: none;
     color: black;
 }
+
+.card-body>p>span,
+.card-body>span,
+.card-body>p {
+    color: #97cbf7;
+}

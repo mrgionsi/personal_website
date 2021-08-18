@@ -18,10 +18,12 @@ export class EducationPageComponent implements OnInit {
     if (a?.contains("show")) {
       a?.remove("show");
       (<HTMLElement>event.path[2]).style.background = 'none';
+      (<HTMLElement>event.path[0]).style.color = 'black';
 
     } else {
       a?.add("show");
       (<HTMLElement>event.path[2]).style.background = '#2d98f0';
+      (<HTMLElement>event.path[0]).style.color = 'white';
 
     }
  

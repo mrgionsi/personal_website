@@ -40,3 +40,10 @@ ul>li>.active {
     color: #2c98f0;
     font-weight: bold;
 }
+
+//////////////////////responsive 
+@media only screen and (max-width: 730px) {
+    #main-left-col {
+        display: none;
+    }
+}

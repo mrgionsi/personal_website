@@ -4,6 +4,10 @@
 /* Importing Bootstrap SCSS file. */
 
 @import '~bootstrap/scss/bootstrap';
+body {
+    overflow-x: hidden;
+}
+
 .font-weight-bold {
     font-weight: bold;
     font-family: "Playfair Display", Georgia, serif;
