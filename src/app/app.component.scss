@@ -20,8 +20,8 @@
 
 #hello-p {
     position: absolute;
-    top: 16em;
-    right: 11em;
+    top: 18em;
+    right: 6em;
     z-index: 100001;
     color: black;
 }
@@ -37,6 +37,10 @@
     font-weight: bold;
     font-size: 40px;
     font-family: "Playfair Display", Georgia, serif;
+}
+
+#hello-p>small {
+    font-size: 15px;
 }
 
 .btn-light {
@@ -58,10 +62,29 @@
 }
 
 @media only screen and (max-width: 800px) {
+    #welcome_component {
+        width: calc(100% - 0px);
+        overflow-x: hidden;
+    }
+    body {
+        overflow-x: hidden;
+        margin-left: 5%;
+    }
     div #hello-p {
         right: 4em;
-        top: 2em;
+        top: 23em;
         z-index: 100001;
         color: #f9fafb;
+    }
+    .btn-light {
+        color: white;
+        text-align: center;
+    }
+    .center {
+        display: block;
+        margin: 2rem;
+    }
+    .timeline {
+        padding: 100px -1px;
     }
 }
