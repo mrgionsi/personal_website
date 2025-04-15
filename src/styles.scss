@@ -1,50 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-
-
-/* Importing Bootstrap SCSS file. */
-
-@import '/node_modules/bootstrap/scss/bootstrap.scss';
-body {
-    overflow-x: hidden;
-}
-
-.font-weight-bold {
-    font-weight: bold;
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: large;
+@font-face {
+    font-family: 'UbuntuCondensed';
+    src: url('assets/fonts/UbuntuCondensed-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
-    font-family: "Quicksand", Arial, sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 1.8;
-    color: rgba(0, 0, 0, 0.7);
-}
-
-h2 {
-    font-size: 18px;
-    margin-bottom: 4em;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    line-height: 1.8;
-    position: relative;
-}
-
-h3 {
-    font-size: 16px;
-    font-family: "Quicksand", Arial, sans-serif;
-    margin-bottom: 10px;
-}
-
-title {
-    font-family: "Quicksand", Arial, sans-serif;
-    margin-bottom: 15px;
-    display: block;
-    font-size: 10px;
-    text-transform: uppercase;
-    color: #999999;
-    font-weight: 500;
-    letter-spacing: 5px;
+    font-family: 'MyCustomFont', sans-serif;
 }
