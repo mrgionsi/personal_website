@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+
 @font-face {
+    //https://fonts.google.com/specimen/Ubuntu+Condensed
     font-family: 'UbuntuCondensed';
     src: url('assets/fonts/UbuntuCondensed-Regular.ttf') format('truetype');
     font-weight: normal;
