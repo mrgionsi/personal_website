@@ -1,3 +1,71 @@
-<h1 class="text-4xl font-bold text-center mt-10">
-    {{ greeting() }}!
-</h1>
+<div>
+
+    <div class="flex items-center justify-end pr-[20%] pb-[15%] pt-[20%]">
+        <h1 class="text-4xl font-bold text-black drop-shadow">
+            {{ greeting() }}!
+        </h1>
+    </div>
+
+    <div class="flex items-center justify-center">
+        <span class="text-black">Just an IT Guy ( Acting as Solution Architect in E/// ) who
+            likes everything about
+            computer science.</span>
+    </div>
+
+
+    <div class="mt-15">
+        <div class="flex flex-wrap justify-center gap-6 p-6">
+            <div class="w-64 p-4 bg-white shadow rounded-lg text-center">
+                <h2 class="text-xl font-semibold mb-2">💼 Jobs</h2>
+                <p class="text-sm text-gray-600">Work experience and professional background.</p>
+            </div>
+
+            <div class="w-64 p-4 bg-white shadow rounded-lg text-center">
+                <h2 class="text-xl font-semibold mb-2">🎓 Education</h2>
+                <p class="text-sm text-gray-600">Academic journey and degrees earned.</p>
+            </div>
+
+            <div class="w-64 p-4 bg-white shadow rounded-lg text-center">
+                <h2 class="text-xl font-semibold mb-2">🛠️ Projects</h2>
+                <p class="text-sm text-gray-600">Side projects and personal coding work.</p>
+            </div>
+
+            <div class="w-64 p-4 bg-white shadow rounded-lg text-center">
+                <h2 class="text-xl font-semibold mb-2">✍️ Articles</h2>
+                <p class="text-sm text-gray-600">Writings, tutorials, and blog posts.</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="max-w-5xl mx-auto px-4 py-12">
+        <h2 class="text-4xl font-bold text-center mb-12">💼 Jobs</h2>
+
+        <div
+            class="relative border-l-2 border-transparent before:absolute before:top-0 before:bottom-0 before:left-1/2 before:border-l-4 before:border-gradient-to-b before:from-blue-400 before:to-purple-600 before:rounded-lg">
+
+            <div *ngFor="let job of jobs; let i = index" class="mb-12 flex items-center w-full"
+                [ngClass]="i % 2 === 0 ? 'justify-start' : 'justify-end'">
+
+                <div class="w-1/2 px-4">
+                    <div
+                        class="bg-white rounded-xl shadow-xl p-6 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl animate-fade-in">
+                        <h3 class="text-xl font-semibold text-blue-700">{{ job.title }}</h3>
+                        <p class="text-sm text-gray-500">{{ job.company }} • {{ job.period }}</p>
+                        <p class="text-sm text-gray-700 mt-2">{{ job.description }}</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Dot -->
+                <div
+                    class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-gradient-to-tr from-purple-500 to-blue-500 border-4 border-white z-10 shadow-lg animate-pulse">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

@@ -1,10 +1,10 @@
 import { Component, OnDestroy, signal, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';  // Import this
+import { CommonModule, isPlatformBrowser } from '@angular/common';  // Import this
 
 @Component({
   selector: 'app-main-page',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.scss']
 })
@@ -50,4 +50,25 @@ export class MainPageComponent implements OnDestroy {
       clearInterval(this.timer);
     }
   }
+  selectedSection = signal<string | null>(null);
+
+  openSection(section: string) {
+    this.selectedSection.set(section);
+  }
+
+  jobs = [
+    {
+      title: 'Frontend Developer',
+      company: 'Awesome Tech Inc.',
+      period: 'Jan 2022 – Present',
+      description: 'Working on Angular + Tailwind to build modern UIs.',
+    },
+    {
+      title: 'Web Developer Intern',
+      company: 'Startup Labs',
+      period: 'Jun 2021 – Dec 2021',
+      description: 'Built landing pages and dashboard components.',
+    },
+  ];
+
 }
