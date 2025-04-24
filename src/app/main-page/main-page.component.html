@@ -1,71 +1,151 @@
 <div>
 
-    <div class="flex items-center justify-end pr-[20%] pb-[15%] pt-[20%]">
-        <h1 class="text-4xl font-bold text-black drop-shadow">
-            {{ greeting() }}!
-        </h1>
-    </div>
+    <div class="min-h-screen flex flex-col text-black
+    bg-[url('/assets/images/5.png')] 
+    bg-cover 
+    bg-center 
+    bg-no-repeat">
 
-    <div class="flex items-center justify-center">
-        <span class="text-black">Just an IT Guy ( Acting as Solution Architect in E/// ) who
-            likes everything about
-            computer science.</span>
-    </div>
-
-
-    <div class="mt-15">
-        <div class="flex flex-wrap justify-center gap-6 p-6">
-            <div class="w-64 p-4 bg-white shadow rounded-lg text-center">
-                <h2 class="text-xl font-semibold mb-2">💼 Jobs</h2>
-                <p class="text-sm text-gray-600">Work experience and professional background.</p>
-            </div>
-
-            <div class="w-64 p-4 bg-white shadow rounded-lg text-center">
-                <h2 class="text-xl font-semibold mb-2">🎓 Education</h2>
-                <p class="text-sm text-gray-600">Academic journey and degrees earned.</p>
-            </div>
-
-            <div class="w-64 p-4 bg-white shadow rounded-lg text-center">
-                <h2 class="text-xl font-semibold mb-2">🛠️ Projects</h2>
-                <p class="text-sm text-gray-600">Side projects and personal coding work.</p>
-            </div>
-
-            <div class="w-64 p-4 bg-white shadow rounded-lg text-center">
-                <h2 class="text-xl font-semibold mb-2">✍️ Articles</h2>
-                <p class="text-sm text-gray-600">Writings, tutorials, and blog posts.</p>
-            </div>
+        <!-- Greeting Section -->
+        <div class="flex-1 flex items-center justify-end pr-[20%]">
+            <h1 class="text-4xl font-bold drop-shadow">
+                {{ greeting() }}!
+            </h1>
         </div>
 
+        <!-- Subtitle Section -->
+        <div class="flex-1 flex items-center justify-center">
+            <span class="text-lg text-center px-4">
+                Just an IT Guy ( Acting as Solution Architect in E/// ) who likes everything about computer science.
+            </span>
+        </div>
+
+        <!-- Boxes Section -->
+        <div class="flex-1 flex items-center justify-center">
+            <div class="flex flex-wrap justify-center gap-10">
+                <div
+                    class="w-64 p-6 backdrop-blur-md bg-white/70 shadow-xl rounded-3xl border border-white/30 transition hover:scale-105 hover:shadow-2xl duration-300 text-center">
+                    <h2 class="text-xl font-bold mb-2">💼 Jobs</h2>
+                    <p class="text-sm text-gray-600">Work experience and professional background.</p>
+                </div>
+
+                <div
+                    class="w-64 p-6 backdrop-blur-md bg-white/70 shadow-xl rounded-3xl border border-white/30 transition hover:scale-105 hover:shadow-2xl duration-300 text-center">
+                    <h2 class="text-xl font-bold mb-2">🎓 Education</h2>
+                    <p class="text-sm text-gray-600">Academic journey and degrees earned.</p>
+                </div>
+
+                <div
+                    class="w-64 p-6 backdrop-blur-md bg-white/70 shadow-xl rounded-3xl border border-white/30 transition hover:scale-105 hover:shadow-2xl duration-300 text-center">
+                    <h2 class="text-xl font-bold mb-2">🛠️ Projects</h2>
+                    <p class="text-sm text-gray-600">Side projects and personal coding work.</p>
+                </div>
+
+                <div
+                    class="w-64 p-6 backdrop-blur-md bg-white/70 shadow-xl rounded-3xl border border-white/30 transition hover:scale-105 hover:shadow-2xl duration-300 text-center">
+                    <h2 class="text-xl font-bold mb-2">✍️ Articles</h2>
+                    <p class="text-sm text-gray-600">Writings, tutorials, and blog posts.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
 
 
+    <div class="min-h-screen flex flex-col text-black
+    bg-[url('/assets/images/5.png')]  scale-y-[-1]
+    bg-cover 
+    bg-center 
+    bg-no-repeat">
+        <div id="job-section" class="relative overflow-hidden  scale-y-[-1]">
 
-    <div class="max-w-5xl mx-auto px-4 py-12">
-        <h2 class="text-4xl font-bold text-center mb-12">💼 Jobs</h2>
+            <!-- 🔁 Flipped Background Image Layer -->
 
-        <div
-            class="relative border-l-2 border-transparent before:absolute before:top-0 before:bottom-0 before:left-1/2 before:border-l-4 before:border-gradient-to-b before:from-blue-400 before:to-purple-600 before:rounded-lg">
 
-            <div *ngFor="let job of jobs; let i = index" class="mb-12 flex items-center w-full"
-                [ngClass]="i % 2 === 0 ? 'justify-start' : 'justify-end'">
+            <!-- 💼 Jobs Section -->
+            <div class="relative z-10 max-w-5xl mx-auto px-4 py-12">
+                <h2 class="text-4xl font-bold text-center mb-12">💼 Jobs</h2>
 
-                <div class="w-1/2 px-4">
-                    <div
-                        class="bg-white rounded-xl shadow-xl p-6 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl animate-fade-in">
-                        <h3 class="text-xl font-semibold text-blue-700">{{ job.title }}</h3>
-                        <p class="text-sm text-gray-500">{{ job.company }} • {{ job.period }}</p>
-                        <p class="text-sm text-gray-700 mt-2">{{ job.description }}</p>
+                <div
+                    class="relative border-l-2 border-transparent before:absolute before:top-0 before:bottom-0 before:left-1/2 before:border-l-4 before:border-gray-300 before:rounded-lg">
+                    <div *ngFor="let job of jobs; let i = index" class="mb-12 flex items-center w-full"
+                        [ngClass]="i % 2 === 0 ? 'justify-start' : 'justify-end'">
+
+                        <div class="w-1/2 px-4">
+                            <div
+                                class="bg-white rounded-xl shadow-md p-6 transition duration-500 hover:scale-105 hover:shadow-xl">
+                                <h3 class="text-xl font-semibold">{{ job.title }}</h3>
+                                <p class="text-sm text-gray-500">{{ job.company }} • {{ job.period }}</p>
+                                <p class="text-sm text-gray-700 mt-2">{{ job.description }}</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-gray-400 border-4 border-white z-10 shadow-lg animate-pulse">
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
 
-                <!-- Timeline Dot -->
-                <div
-                    class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-gradient-to-tr from-purple-500 to-blue-500 border-4 border-white z-10 shadow-lg animate-pulse">
+    <div class="min-h-screen flex flex-col text-black
+    bg-[url('/assets/images/5.png')] 
+    bg-cover 
+    bg-center 
+    bg-no-repeat">
+        <div id="education-section" class="relative overflow-hidden ">
+
+            <!-- 🎓 Education Section -->
+            <div class="max-w-5xl mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-10">🎓 Education</h2>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div *ngFor="let edu of education"
+                        class="relative bg-white/80 backdrop-blur-md rounded-xl p-6 border border-gray-200 shadow-md transition hover:scale-[1.02] hover:shadow-lg">
+
+                        <div
+                            class="absolute -top-6 left-6 w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-white shadow-md text-lg">
+                            🎓
+                        </div>
+
+                        <h3 class="text-xl font-semibold">{{ edu.degree }}</h3>
+                        <p class="text-sm text-gray-600 mb-1">{{ edu.institution }}</p>
+                        <p class="text-sm text-gray-500 italic">{{ edu.period }}</p>
+                        <p class="text-sm text-gray-700 mt-2">{{ edu.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 🛠️ Personal Projects -->
+        <div class="max-w-6xl mx-auto px-4 py-12">
+            <h2 class="text-4xl font-bold text-center mb-10">🛠️ Personal Projects</h2>
+
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div *ngFor="let project of projects"
+                    class="group relative bg-white rounded-xl overflow-hidden shadow-md transition-transform duration-300 hover:scale-[1.03]">
+
+                    <div class="h-48 bg-cover bg-center bg-gray-200"
+                        [ngStyle]="{'background-image': 'url(' + project.image + ')'}">
+                    </div>
+
+                    <div class="p-5 text-gray-900">
+                        <h3 class="text-xl font-semibold">{{ project.name }}</h3>
+                        <p class="text-sm text-gray-500">{{ project.stack.join(', ') }}</p>
+                        <p class="text-sm mt-2 text-gray-700">{{ project.description }}</p>
+
+                        <div class="mt-4 flex gap-4">
+                            <a *ngIf="project.github" [href]="project.github" target="_blank"
+                                class="text-gray-700 underline hover:text-gray-900">GitHub</a>
+                            <a *ngIf="project.demo" [href]="project.demo" target="_blank"
+                                class="text-gray-700 underline hover:text-gray-900">Live Demo</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
 
 
 </div>

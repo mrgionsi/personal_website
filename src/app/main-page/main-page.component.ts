@@ -58,17 +58,55 @@ export class MainPageComponent implements OnDestroy {
 
   jobs = [
     {
-      title: 'Frontend Developer',
-      company: 'Awesome Tech Inc.',
+      title: 'Solution Architect',
+      company: 'Ericsson',
       period: 'Jan 2022 – Present',
       description: 'Working on Angular + Tailwind to build modern UIs.',
     },
     {
-      title: 'Web Developer Intern',
-      company: 'Startup Labs',
+      title: 'Integration Engineer',
+      company: 'Ericsson',
+      period: 'Jan 2022 – Present',
+      description: 'Working on Angular + Tailwind to build modern UIs.',
+    },
+    {
+      title: 'Web Developer',
+      company: '3EM',
       period: 'Jun 2021 – Dec 2021',
       description: 'Built landing pages and dashboard components.',
     },
+  ];
+  education = [
+    {
+      degree: 'MSc in Computer Science',
+      institution: 'University of Naples Federico II',
+      period: '2019 – 2021',
+      description: 'Specialized in AI, data science, and modern web technologies.',
+    },
+    {
+      degree: 'BSc in Software Engineering',
+      institution: 'Politecnico di Milano',
+      period: '2016 – 2019',
+      description: 'Focused on algorithms, databases, and systems design.',
+    }
+  ];
+  projects = [
+    {
+      name: 'Smart B&B Dashboard',
+      description: 'A real-time dashboard for managing guests, bookings, and identity verification.',
+      stack: ['Angular', 'Flask', 'PostgreSQL'],
+      image: 'assets/projects/bnb.jpg',
+      github: 'https://github.com/yourname/bnb-dashboard',
+      demo: 'https://bnb-dashboard.example.com'
+    },
+    {
+      name: 'AI Translator',
+      description: 'Multilingual translator powered by transformers and OpenAI API.',
+      stack: ['Python', 'FastAPI', 'Tailwind'],
+      image: 'assets/projects/translator.jpg',
+      github: 'https://github.com/yourname/ai-translator',
+    },
+    // more...
   ];
 
 }
