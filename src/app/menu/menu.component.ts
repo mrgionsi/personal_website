@@ -17,4 +17,9 @@ export class MenuComponent {
     // Check if the window has been scrolled down by 50px or more
     this.scrolled = window.scrollY > 50;
   }
+  isMenuOpen = false;  // Default state of the menu
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;  // Toggle menu visibility
+  }
 }
