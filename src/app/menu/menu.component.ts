@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './menu.component.html',
-  styleUrl: './menu.component.scss'
+  styleUrl: './menu.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class MenuComponent {
   scrolled = false;
