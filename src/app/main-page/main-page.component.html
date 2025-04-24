@@ -1,64 +1,60 @@
 <div>
 
-    <div class="min-h-screen flex flex-col text-black
-    bg-[url('/assets/images/5.png')] 
-    bg-cover 
-    bg-center 
-    bg-no-repeat">
+    <div class="min-h-screen flex flex-col text-black bg-[url('/assets/images/5.png')] bg-cover bg-center bg-no-repeat">
 
         <!-- Greeting Section -->
-        <div class="flex-1 flex items-center justify-end pr-[20%] pt-[10%]">
-            <h1 class="text-4xl font-bold drop-shadow">
+        <div class="flex-1 flex items-center justify-center sm:justify-end px-4 sm:px-[20%] pt-26 sm:pt-[10%] pb-20">
+            <h1 class="text-3xl sm:text-4xl font-bold drop-shadow">
                 {{ greeting() }}!
             </h1>
         </div>
 
         <!-- Subtitle Section -->
-        <div class="flex-1 flex flex-col items-center justify-center space-y-4 px-4">
-            <p class="text-lg text-center">
+        <div class="flex-1 flex flex-col items-center justify-center space-y-4 px-4 sm:px-8">
+            <p class="text-base sm:text-lg text-center">
                 Just an IT Guy ( Acting as Solution Architect in E/// ) who likes everything about computer science.
             </p>
-            <p class="text-lg text-center w-200">
+            <p class="text-base sm:text-lg text-center">
                 I'm 29 yo. I am based in Caserta. I like everything concerning IT, from Software Development, Agile
-                Methodology,
-                Automation process, DevOps, Containerization and Cloud. I like football, playing with friends as well as
-                running and training at Gym.
+                Methodology, Automation process, DevOps, Containerization and Cloud. I like football, playing with
+                friends as well as running and training at Gym.
             </p>
-            <p class="text-lg text-center">
+            <p class="text-base sm:text-lg text-center">
                 Last but not least I love Self Hosted and Smart Home. Telling all ongoing projects in Blog page.
             </p>
         </div>
 
-
         <!-- Boxes Section -->
         <div class="flex-1 flex items-center justify-center">
-            <div class="flex flex-wrap justify-center gap-10">
+            <div class="flex flex-wrap justify-center gap-6 sm:gap-10">
                 <!-- Add anchor links to boxes -->
                 <a href="#job-section" (click)="handleAnchorClick($event, 'job-section')"
-                    class="w-64 p-6 backdrop-blur-md bg-white/70 shadow-xl rounded-3xl border border-white/30 transition hover:scale-105 hover:shadow-2xl duration-300 text-center">
-                    <h2 class="text-xl font-bold mb-2">💼 Jobs</h2>
+                    class="w-64 sm:w-72 p-6 backdrop-blur-md bg-white/70 shadow-xl rounded-3xl border border-white/30 transition hover:scale-105 hover:shadow-2xl duration-300 text-center">
+                    <h2 class="text-lg sm:text-xl font-bold mb-2">💼 Jobs</h2>
                     <p class="text-sm text-gray-600">Work experience and professional background.</p>
                 </a>
                 <a href="#education-section" (click)="handleAnchorClick($event, 'education-section')"
-                    class="w-64 p-6 backdrop-blur-md bg-white/70 shadow-xl rounded-3xl border border-white/30 transition hover:scale-105 hover:shadow-2xl duration-300 text-center">
-                    <h2 class="text-xl font-bold mb-2">🎓 Education</h2>
+                    class="w-64 sm:w-72 p-6 backdrop-blur-md bg-white/70 shadow-xl rounded-3xl border border-white/30 transition hover:scale-105 hover:shadow-2xl duration-300 text-center">
+                    <h2 class="text-lg sm:text-xl font-bold mb-2">🎓 Education</h2>
                     <p class="text-sm text-gray-600">Academic journey and degrees earned.</p>
                 </a>
 
                 <a href="#project-section" (click)="handleAnchorClick($event, 'project-section')"
-                    class="w-64 p-6 backdrop-blur-md bg-white/70 shadow-xl rounded-3xl border border-white/30 transition hover:scale-105 hover:shadow-2xl duration-300 text-center">
-                    <h2 class="text-xl font-bold mb-2">🛠️ Projects</h2>
+                    class="w-64 sm:w-72 p-6 backdrop-blur-md bg-white/70 shadow-xl rounded-3xl border border-white/30 transition hover:scale-105 hover:shadow-2xl duration-300 text-center">
+                    <h2 class="text-lg sm:text-xl font-bold mb-2">🛠️ Projects</h2>
                     <p class="text-sm text-gray-600">Side projects and personal coding work.</p>
                 </a>
 
                 <a href="#article-section" (click)="handleAnchorClick($event, 'article-section')"
-                    class="w-64 p-6 backdrop-blur-md bg-white/70 shadow-xl rounded-3xl border border-white/30 transition hover:scale-105 hover:shadow-2xl duration-300 text-center">
-                    <h2 class="text-xl font-bold mb-2">✍️ Articles</h2>
+                    class="w-64 sm:w-72 p-6 backdrop-blur-md bg-white/70 shadow-xl rounded-3xl border border-white/30 transition hover:scale-105 hover:shadow-2xl duration-300 text-center">
+                    <h2 class="text-lg sm:text-xl font-bold mb-2">✍️ Articles</h2>
                     <p class="text-sm text-gray-600">Writings, tutorials, and blog posts.</p>
                 </a>
             </div>
         </div>
     </div>
+
+
 
     <div class="min-h-screen flex flex-col text-black
     bg-[url('/assets/images/5.png')]  scale-y-[-1]
