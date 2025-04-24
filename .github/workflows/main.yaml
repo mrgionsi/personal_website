@@ -9,6 +9,11 @@ jobs:
         - name: Checkout Repository
           uses: actions/checkout@v3
           
+        - name: Set Git Identity
+          run: |
+            git config --global user.email "g.pasquariello96@gmail.com"
+            git config --global user.name "Giovanni"
+  
         - name: Adding Node.js
           uses: actions/setup-node@v3
           with:
@@ -16,10 +21,10 @@ jobs:
             
         - name: Install Dependencies
           run: npm install --force
-          
+            
         - name: Build Angular App
           run: npm run build
-          
+            
         - name: Deploy to GitHub Pages
           run: |
             npx angular-cli-ghpages --dir=dist/personal-website/browser --no-silent
