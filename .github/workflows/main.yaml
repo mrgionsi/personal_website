@@ -24,7 +24,10 @@ jobs:
             
         - name: Build Angular App
           run: npm run build
-            
+        
+        - name: Create CNAME file with custom domain
+          run: echo "giovannipasquariello.dev" > dist/personal-website/browser/CNAME
+          
         - name: Deploy to GitHub Pages
           run: |
             npx angular-cli-ghpages --dir=dist/personal-website/browser --no-silent
