@@ -124,12 +124,14 @@ export class MainPageComponent implements OnDestroy {
   projects = [
     {
       name: 'Remote Check-in',
-      description: 'Platorm to handle reservatin for Bed and Breakfast remotly and validate identity documentation',
+      description: `Platorm to handle reservatin for Bed and Breakfast remotly and validate identity documentation.`,
       stack: ['Angular', 'Angular Material', 'Python', 'FastAPI',
         'PostgreSQL', 'Docker', 'Code Rabbit AI - Code Review', 'Sonarqube - Code Review', 'DevOps'],
       image: 'assets/images/remote-checkin.png',
       github: 'https://github.com/mrgionsi/remote-checkin',
-      demo: 'https://gestionale-magazzino.gionsihome.duckdns.org'
+      demo: 'https://remote-checkin.gionsihome.duckdns.org',
+      demo_be: 'https://remote-checkin.gionsihome.duckdns.org/admin'
+
     },
     {
       name: 'U-Work',
