@@ -22,7 +22,7 @@ jobs:
           
         - name: Deploy to GitHub Pages
           run: |
-            npx angular-cli-ghpages --dir=dist/personal-website/browser
+            npx angular-cli-ghpages --dir=dist/personal-website/browser --no-silent
           env:
             CI: true
             GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
