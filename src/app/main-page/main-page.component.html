@@ -7,42 +7,51 @@
     bg-no-repeat">
 
         <!-- Greeting Section -->
-        <div class="flex-1 flex items-center justify-end pr-[20%]">
+        <div class="flex-1 flex items-center justify-end pr-[20%] pt-[10%]">
             <h1 class="text-4xl font-bold drop-shadow">
                 {{ greeting() }}!
             </h1>
         </div>
 
         <!-- Subtitle Section -->
-        <div class="flex-1 flex items-center justify-center">
-            <span class="text-lg text-center px-4">
+        <div class="flex-1 flex flex-col items-center justify-center space-y-4 px-4">
+            <p class="text-lg text-center">
                 Just an IT Guy ( Acting as Solution Architect in E/// ) who likes everything about computer science.
-            </span>
+            </p>
+            <p class="text-lg text-center w-200">
+                I'm 29 yo. I am based in Caserta. I like everything concerning IT, from Software Development, Agile
+                Methodology,
+                Automation process, DevOps, Containerization and Cloud. I like football, playing with friends as well as
+                running and training at Gym.
+            </p>
+            <p class="text-lg text-center">
+                Last but not least I love Self Hosted and Smart Home. Telling all ongoing projects in Blog page.
+            </p>
         </div>
+
 
         <!-- Boxes Section -->
         <div class="flex-1 flex items-center justify-center">
             <div class="flex flex-wrap justify-center gap-10">
                 <!-- Add anchor links to boxes -->
-                <a href="#job-section"
+                <a href="#job-section" (click)="handleAnchorClick($event, 'job-section')"
                     class="w-64 p-6 backdrop-blur-md bg-white/70 shadow-xl rounded-3xl border border-white/30 transition hover:scale-105 hover:shadow-2xl duration-300 text-center">
                     <h2 class="text-xl font-bold mb-2">💼 Jobs</h2>
                     <p class="text-sm text-gray-600">Work experience and professional background.</p>
                 </a>
-
-                <a href="#education-section"
+                <a href="#education-section" (click)="handleAnchorClick($event, 'education-section')"
                     class="w-64 p-6 backdrop-blur-md bg-white/70 shadow-xl rounded-3xl border border-white/30 transition hover:scale-105 hover:shadow-2xl duration-300 text-center">
                     <h2 class="text-xl font-bold mb-2">🎓 Education</h2>
                     <p class="text-sm text-gray-600">Academic journey and degrees earned.</p>
                 </a>
 
-                <a href="#project-section"
+                <a href="#project-section" (click)="handleAnchorClick($event, 'project-section')"
                     class="w-64 p-6 backdrop-blur-md bg-white/70 shadow-xl rounded-3xl border border-white/30 transition hover:scale-105 hover:shadow-2xl duration-300 text-center">
                     <h2 class="text-xl font-bold mb-2">🛠️ Projects</h2>
                     <p class="text-sm text-gray-600">Side projects and personal coding work.</p>
                 </a>
 
-                <a href="#article-section"
+                <a href="#article-section" (click)="handleAnchorClick($event, 'article-section')"
                     class="w-64 p-6 backdrop-blur-md bg-white/70 shadow-xl rounded-3xl border border-white/30 transition hover:scale-105 hover:shadow-2xl duration-300 text-center">
                     <h2 class="text-xl font-bold mb-2">✍️ Articles</h2>
                     <p class="text-sm text-gray-600">Writings, tutorials, and blog posts.</p>
@@ -56,39 +65,9 @@
     bg-cover 
     bg-center 
     bg-no-repeat">
-        <div id="job-section" class="relative overflow-hidden  scale-y-[-1]">
-            <!-- 💼 Jobs Section -->
-            <div class="relative z-10 max-w-5xl mx-auto px-4 py-12">
-                <h2 class="text-4xl font-bold text-center mb-12">💼 Jobs</h2>
-                <div
-                    class="relative border-l-2 border-transparent before:absolute before:top-0 before:bottom-0 before:left-1/2 before:border-l-4 before:border-gray-300 before:rounded-lg">
-                    <div *ngFor="let job of jobs; let i = index" class="mb-12 flex items-center w-full"
-                        [ngClass]="i % 2 === 0 ? 'justify-start' : 'justify-end'">
-                        <div class="w-1/2 px-4">
-                            <div
-                                class="bg-white rounded-xl shadow-md p-6 transition duration-500 hover:scale-105 hover:shadow-xl">
-                                <h3 class="text-xl font-semibold">{{ job.title }}</h3>
-                                <p class="text-sm text-gray-500">{{ job.company }} • {{ job.period }}</p>
-                                <p class="text-sm text-gray-700 mt-2">{{ job.description }}</p>
-                            </div>
-                        </div>
-                        <div
-                            class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-gray-400 border-4 border-white z-10 shadow-lg animate-pulse">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="min-h-screen flex flex-col text-black
-    bg-[url('/assets/images/5.png')] 
-    bg-cover 
-    bg-center 
-    bg-no-repeat">
-        <div id="education-section" class="relative overflow-hidden ">
+        <div id="education-section" class="relative overflow-hidden scale-y-[-1] ">
             <!-- 🎓 Education Section -->
-            <div class="max-w-5xl mx-auto px-6">
+            <div class=" mx-auto px-6">
                 <h2 class="text-4xl font-bold text-center mb-10">🎓 Education</h2>
                 <div class="grid md:grid-cols-2 gap-8">
                     <div *ngFor="let edu of education"
@@ -104,19 +83,51 @@
                 </div>
             </div>
         </div>
+        <div id="job-section" class="relative overflow-hidden  scale-y-[-1]">
+            <!-- 💼 Jobs Section -->
+            <div class="relative z-10 max-w-5xl mx-auto px-4 py-12">
+                <h2 class="text-4xl font-bold text-center mb-12">💼 Jobs</h2>
+                <div
+                    class="relative border-l-2 border-transparent before:absolute before:top-0 before:bottom-0 before:left-1/2 before:border-l-4 before:border-gray-300 before:rounded-lg">
+                    <div *ngFor="let job of jobs; let i = index" class="mb-12 flex items-center w-full"
+                        [ngClass]="i % 2 === 0 ? 'justify-start' : 'justify-end'">
+                        <div class="w-1/2 px-4">
+                            <div
+                                class="bg-white rounded-xl shadow-md p-6 transition duration-500 hover:scale-105 hover:shadow-xl">
+                                <h3 class="text-xl font-semibold">{{ job.title }}</h3>
+                                <p class="text-sm text-gray-500">{{ job.company }} • {{ job.period }}</p>
+                                <p class="text-sm text-gray-700 mt-2 whitespace-pre-line">{{ job.description }}</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-gray-400 border-4 border-white z-10 shadow-lg animate-pulse">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+
+    </div>
+
+    <div class="min-h-screen flex flex-col text-black
+    bg-[url('/assets/images/5.png')] 
+    bg-cover 
+    bg-center 
+    bg-no-repeat">
         <!-- 🛠️ Personal Projects -->
-        <div id="project-section" class="max-w-6xl mx-auto px-4 py-12">
+        <div id="project-section" class="max-w-3xl mx-auto px-4 py-12">
             <h2 class="text-4xl font-bold text-center mb-10">🛠️ Personal Projects</h2>
-            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
                 <div *ngFor="let project of projects"
                     class="group relative bg-white rounded-xl overflow-hidden shadow-md transition-transform duration-300 hover:scale-[1.03]">
-                    <div class="h-48 bg-cover bg-center bg-gray-200"
-                        [ngStyle]="{'background-image': 'url(' + project.image + ')'}"></div>
+                    <div class="h-40 bg-cover bg-center bg-black"
+                        [ngClass]="project.name == 'U-Work'? 'bg-black' : 'bg-white' "
+                        [ngStyle]="getBackgroundStyles(project)"></div>
                     <div class="p-5 text-gray-900">
                         <h3 class="text-xl font-semibold">{{ project.name }}</h3>
                         <p class="text-sm text-gray-500">{{ project.stack.join(', ') }}</p>
-                        <p class="text-sm mt-2 text-gray-700">{{ project.description }}</p>
+                        <p class="text-sm mt-2 text-gray-700 whitespace-pre-line">{{ project.description }}</p>
                         <div class="mt-4 flex gap-4">
                             <a *ngIf="project.github" [href]="project.github" target="_blank"
                                 class="text-gray-700 underline hover:text-gray-900">GitHub</a>
@@ -126,6 +137,90 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+
+
+    <!-- 📬 Contact Section -->
+    <div id="contact-section" class="min-h-screen flex items-center justify-center text-black 
+bg-[url('/assets/images/5.png')] bg-cover bg-center bg-no-repeat scale-y-[-1]">
+
+        <div
+            class="max-w-4xl w-full mx-auto px-6 py-12 bg-white/80 backdrop-blur-md rounded-3xl shadow-2xl text-center border border-white/30 scale-y-[-1]">
+
+            <!-- Profile Picture -->
+            <div class="flex justify-center mb-6">
+                <img src="/assets/images/me.jpg" alt="Your Name"
+                    class="w-60 h-60 rounded-full border-4 border-white shadow-lg object-cover">
+            </div>
+
+            <!-- Contact Details -->
+            <h2 class="text-4xl font-bold mb-4">📬 Contact Me</h2>
+            <p class="text-gray-700 mb-6">Feel free to reach out if you'd like to collaborate or just chat about
+                tech!</p>
+
+            <div class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-6 text-gray-800 text-sm">
+                <div class="flex items-center gap-2">
+                    <span class="font-semibold">📧 Email:</span>
+                    <a href="mailto:youremail@example.com"
+                        class="underline hover:text-black">g.pasquariello96&#64;gmail.com</a>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="font-semibold">💼 LinkedIn:</span>
+                    <a href="www.linkedin.com/in/giovanni-pasquariello" target="_blank"
+                        class="underline hover:text-black">
+                        linkedin.com/in/giovanni-pasquariello
+                    </a>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="font-semibold">💻 GitHub:</span>
+                    <a href="https://github.com/mrgionsi" target="_blank" class="underline hover:text-black">
+                        github.com/mrgionsi
+                    </a>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="font-semibold">✈️ Telegram:</span>
+                    <a href="https://t.me/mr_gionsi" target="_blank" class="underline hover:text-black">
+                        t.me/mr_gionsi
+                    </a>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="font-semibold">📷 Instagram:</span>
+                    <a href="https://www.instagram.com/mr_gionsi" target="_blank" class="underline hover:text-black">
+                        instagram.com/mr_gionsi
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- CV Download -->
+            <div class="mt-8">
+                <a href="/assets/CV-Pasquariello Giovanni.pdf" target="_blank"
+                    class="inline-block px-6 py-3 bg-black text-white rounded-full shadow-md transition hover:scale-105 hover:shadow-xl">
+                    📄 Download My CV
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="flex flex-col items-center justify-center p-4">
+        <div class="text-xl font-semibold mb-4">GitHub Contributions</div>
+
+        <div class="relative w-full max-w-xl h-auto">
+            <!-- Loader -->
+            <div *ngIf="loading" class="absolute inset-0 flex items-center justify-center bg-gray-100 rounded-md">
+                <svg class="animate-spin h-6 w-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                </svg>
+            </div>
+
+            <!-- Image -->
+            <img [src]="'https://ghchart.rshah.org/mrgionsi'" alt="GitHub Contributions"
+                class="rounded-md w-full shadow-lg" (load)="loading = false" />
         </div>
     </div>
 </div>
