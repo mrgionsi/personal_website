@@ -139,6 +139,7 @@ export class MainPageComponent implements OnDestroy {
       stack: ['Angular', 'Flask', 'PostgreSQL', 'Jitsi Meet Self Hostes and customized', 'Keycloak Integration for Authentication', 'Docker', 'PaaS'],
       image: 'https://u-work.it/assets/images/logo-u-work-bianco.png',
       github: '',
+      demo_be: '',
       demo: 'https://u-work.it/aboutus'
     },
     {
@@ -147,6 +148,7 @@ export class MainPageComponent implements OnDestroy {
       Access with Username = admin; Password = Admin123.`,
       stack: ['Angular', 'Angular Material', 'Python', 'FastAPI', 'PostgreSQL', 'Docker', 'CI/CD'],
       image: 'assets/images/gesta.png',
+      demo_be: '',
       demo: 'https://gestionale-magazzino.gionsihome.duckdns.org'
     },
     {
