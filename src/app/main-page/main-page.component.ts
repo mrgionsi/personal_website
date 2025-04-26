@@ -165,6 +165,13 @@ export class MainPageComponent implements OnDestroy {
       image: 'https://bbchapeau.it/logo.png',
       demo: 'https://bbchapeau.it'
     },
+    {
+      name: 'Desktop App for estimate generation',
+      description: 'Window App for generate estimation for lift company.',
+      stack: ['Angular', 'Electron', 'SQLite', 'OTA Updates via Github'],
+      image: '',
+      demo: ''
+    },
     // more...
   ];
 
